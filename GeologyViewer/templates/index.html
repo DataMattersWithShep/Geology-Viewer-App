@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Surface Geology</title>
+  </head>
+<body>
+	<div id = "input_file">
+		<input type="file" id="df" name="datafile" size="40">
+	</div>
+
+	<div>
+		<input type="submit" name="submit" value={{ date_now() }}>
+	</div>
+	
+	<div>
+		Select an attribute below:<br>
+		<select>
+		{% for attribute in attribute_list %}
+			<option value="{{ attribute }}">{{ attribute }}</option>
+		{% endfor %} 
+		</select>
+	</div>
+	
+	<form>
+		Then select a sub-attribute below:<br>
+		<input type="text" name="sub_attribute"><br>
+	</form>
+	
+	<div>
+		<input type="submit" name="submit" value="Submit Attribute">
+	</div>
+	
+	<div>
+		<input type="submit" name="submit" value="Submit Map">
+	</div>
+
+</body>
+</html>
